@@ -30,3 +30,36 @@ keys = [
   Key([mod, 'shift'], 'q', lazy.shutdown(), desc = 'shutdown qtile')
 ]
 
+# workspaces
+group_names = [
+  'home',
+  'net',
+  'msg',
+  'mus',
+  'git',
+  'etc'
+]
+
+groups = [Group(name, {}) for name in group_names]
+
+# mod + [group number] = switch to group
+# mod + shift + [group number] = move currently focused window to group
+for i, (name, kwargs) in enumerate(group_names, 1):
+  keys.append(Key([mod], str(i), lazy.group[name].toscreen()))
+  keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
+  
+# themes!
+gruvbox = [
+  '282828', # background   [0]
+  '504945', # current line [1] 
+  'fbf1c7', # foreground   [2] 
+  '665c54', # comment      [3]
+  'cc241d', # red          [4]
+  '98971a', # green        [5]
+  '458588', # blue         [6]
+  '689d6a', # aqua         [7] 
+  'b16286', # purple       [8]
+  'fe8019', # orange       [9]
+  'ebdbb2', # alt fg       [10]
+]
+
