@@ -78,7 +78,7 @@ layouts = {
 
 # screens
 screens = [
-    Screen(top=bar.Bar(widgets=widgets, opacity=1, size=24))
+    Screen()
 ]
 
 wmname = 'LG3D'
