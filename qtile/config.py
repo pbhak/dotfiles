@@ -63,3 +63,17 @@ gruvbox = [
   'ebdbb2', # alt fg       [10]
 ]
 
+# layouts
+layout_settings = {
+  'border_width': 2,
+  'margin': 3,
+  'border_focus': gruvbox[5]
+}
+
+layouts = {
+  layout.MonadTall(**layout_settings),
+  layout.Max(),
+  layout.Floating(**layout_settings)
+}
+
+wmname = 'LG3D'
