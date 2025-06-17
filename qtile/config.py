@@ -44,7 +44,7 @@ groups = [Group(name, {}) for name in group_names]
 
 # mod + [group number] = switch to group
 # mod + shift + [group number] = move currently focused window to group
-for i, (name, kwargs) in enumerate(group_names, 1):
+for i, name in enumerate(group_names, 1):
   keys.append(Key([mod], str(i), lazy.group[name].toscreen()))
   keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
   
