@@ -1,3 +1,3 @@
 #!/bin/sh
 kitty &
-polybar
+polybar &
