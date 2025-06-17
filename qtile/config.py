@@ -1,6 +1,6 @@
 import os, subprocess
 from libqtile.config import Key, Group, Screen
-from libqtile import layout, hook
+from libqtile import layout, hook, bar, widget
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -73,13 +73,62 @@ layout_settings = {
 
 layouts = {
   layout.MonadTall(**layout_settings),
-  layout.Max(),
-  layout.Floating(**layout_settings)
+  layout.Max()
 }
+
+# bar
+widget_defaults = dict(
+  font = 'Source Code Pro',
+  fontsize = 12,
+  padding = 2,
+  background = gruvbox[0],
+  foreground = gruvbox[2]
+)
+
+## widgets
+widgets = [
+  widget.Sep(
+    linewidth = 0,
+    padding = 6
+  ),
+  widget.GroupBox(
+    active = gruvbox[6],
+    inactive = gruvbox[2],
+    highlight_method = 'block',
+    rounded = False,
+    this_current_screen_border = gruvbox[1],
+    highlight_color = gruvbox[1]
+  ),
+  widget.Sep(
+    linewidth = 0,
+    padding = 600,
+  ),
+  widget.CurrentLayout(
+    fmt = 'Layout: {}',
+    foreground = gruvbox[6]
+  ),
+  widget.TextBox(text = '|'),
+  widget.CheckUpdates(
+    display_format = '{updates}',
+    fmt = 'Updates: {}',
+    colour_have_updates = gruvbox[4],
+    colour_no_updates = gruvbox[4],
+    no_update_string = '0',
+    custom_command = 'checkupdates'
+  ),
+  widget.TextBox(text='|'),
+  widget.Clock(
+    format = '%b %d %I:%M',
+    foreground = gruvbox[5]
+  ),
+  widget.TextBox(text='|'),
+  widget.Systray(),
+  widget.Spacer(length=150)
+]
 
 # screens
 screens = [
-    Screen()
+    Screen(top=bar.Bar(widgets=widgets,opacity = 1, size = 24))
 ]
 
 @hook.subscribe.startup_once
