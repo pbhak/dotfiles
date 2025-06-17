@@ -22,7 +22,7 @@ keys = [
   Key([mod], 'Return', lazy.spawn(terminal), desc = 'launch terminal'),
   Key([mod], 't', lazy.spawn(file_manager), desc = 'launch file manager'),
   Key([mod], 'f', lazy.spawn(web_browser), desc = 'launch web browser'),
-  Key([mod], 'space', lazy.spawn(app_launcher), desc = 'launch app launcher')
+  Key([mod], 'space', lazy.spawn(app_launcher), desc = 'launch app launcher'),
   # layout, window manipulation and qtile specific commands
   Key([mod], 'Tab', lazy.next_layout(), desc = 'toggle between layouts'),
   Key([mod], 'w', lazy.window.kill(), desc = 'kill focused window'),
