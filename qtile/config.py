@@ -1,5 +1,6 @@
+import os, subprocess
 from libqtile.config import Key, Group, Screen
-from libqtile import layout
+from libqtile import layout, hook
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -80,5 +81,10 @@ layouts = {
 screens = [
     Screen()
 ]
+
+@hook.subscribe.startup_once
+def autostart():
+  file = os.path.expanduser('~/.config/qtile/autostart.sh')
+  subprocess.call(file)
 
 wmname = 'LG3D'
