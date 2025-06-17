@@ -1,4 +1,4 @@
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, Screen
 from libqtile import layout
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -75,5 +75,10 @@ layouts = {
   layout.Max(),
   layout.Floating(**layout_settings)
 }
+
+# screens
+screens = [
+    Screen(top=bar.Bar(widgets=widgets, opacity=1, size=24))
+]
 
 wmname = 'LG3D'
