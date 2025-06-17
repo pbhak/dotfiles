@@ -1,4 +1,4 @@
 #!/bin/sh
 kitty &
 nitrogen --restore &
-polybar &
+picom -b &

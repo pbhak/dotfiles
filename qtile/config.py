@@ -55,7 +55,7 @@ gruvbox = [
   '504945', # current line [1] 
   'fbf1c7', # foreground   [2] 
   '665c54', # comment      [3]
-  'cc241d', # red          [4]
+  'fb4934', # red          [4]
   '98971a', # green        [5]
   '458588', # blue         [6]
   '689d6a', # aqua         [7] 
@@ -68,7 +68,7 @@ gruvbox = [
 layout_settings = {
   'border_width': 2,
   'margin': 3,
-  'border_focus': gruvbox[5]
+  'border_focus': gruvbox[6]
 }
 
 layouts = {
@@ -92,16 +92,14 @@ widgets = [
     padding = 6
   ),
   widget.GroupBox(
-    active = gruvbox[6],
+    active = gruvbox[5],
     inactive = gruvbox[2],
     highlight_method = 'block',
-    rounded = False,
-    this_current_screen_border = gruvbox[1],
-    highlight_color = gruvbox[1]
+    rounded = False
   ),
   widget.Sep(
     linewidth = 0,
-    padding = 600,
+    padding = 800,
   ),
   widget.CurrentLayout(
     fmt = 'Layout: {}',
@@ -128,7 +126,7 @@ widgets = [
 
 # screens
 screens = [
-    Screen(top=bar.Bar(widgets=widgets,opacity = 1, size = 24))
+    Screen(top=bar.Bar(widgets = widgets, opacity = 1, size = 30))
 ]
 
 @hook.subscribe.startup_once
