@@ -92,7 +92,7 @@ widgets = [
     padding = 6
   ),
   widget.GroupBox(
-    active = gruvbox[6],
+    active = gruvbox[1],
     inactive = gruvbox[2],
     highlight_method = 'block',
     rounded = False
