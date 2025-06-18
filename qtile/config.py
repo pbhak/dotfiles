@@ -72,8 +72,8 @@ layout_settings = {
 }
 
 layouts = {
-  layout.Max(),
   layout.MonadTall(**layout_settings),
+  layout.Max()
 }
 
 # bar
