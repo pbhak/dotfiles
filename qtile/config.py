@@ -99,7 +99,7 @@ widgets = [
   ),
   widget.Sep(
     linewidth = 0,
-    padding = 925,
+    padding = 910,
   ),
   widget.CurrentLayout(
     fmt = 'Layout: {}',
@@ -120,7 +120,7 @@ widgets = [
     foreground = gruvbox[5]
   ),
   widget.Spacer(
-    length = 35
+    length = 50
   )
 ]
 
