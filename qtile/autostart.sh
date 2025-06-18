@@ -1,3 +1,3 @@
 #!/bin/sh
 kitty &
-nitrogen --restore &
+swaybg -i ~/.config/qtile/wallpapers/midi.JPG &
