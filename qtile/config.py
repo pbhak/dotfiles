@@ -99,7 +99,7 @@ widgets = [
   ),
   widget.Sep(
     linewidth = 0,
-    padding = 930,
+    padding = 925,
   ),
   widget.CurrentLayout(
     fmt = 'Layout: {}',
@@ -116,11 +116,11 @@ widgets = [
   ),
   widget.TextBox(text='|'),
   widget.Clock(
-    format = '%b %d %T',
+    format = '%b %d %I:%M:%S %p',
     foreground = gruvbox[5]
   ),
   widget.Spacer(
-    length = 30
+    length = 35
   )
 ]
 
