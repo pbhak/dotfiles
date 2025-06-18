@@ -119,9 +119,7 @@ widgets = [
     format = '%b %d %I:%M',
     foreground = gruvbox[5]
   ),
-  widget.TextBox(text='|'),
-  widget.Systray(),
-  widget.Spacer(length=150)
+  widget.TextBox(text='|')
 ]
 
 # screens
