@@ -7,9 +7,9 @@ from libqtile.utils import guess_terminal
 mod = 'mod4'
 
 terminal = guess_terminal() # or kitty
-app_launcher = 'rofi -show drun'
+app_launcher = 'rofi -show drun -font "Fira Code Nerd Font 11"'
 file_manager = ''
-web_browser = ''
+web_browser = 'qutebrowser'
 
 # keybindings
 keys = [
@@ -78,7 +78,7 @@ layouts = {
 
 # bar
 widget_defaults = dict(
-  font = 'Source Code Pro',
+  font = 'Fira Code',
   fontsize = 12,
   padding = 2,
   background = gruvbox[0],
