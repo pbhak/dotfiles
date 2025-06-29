@@ -103,6 +103,10 @@ widgets = [
     foreground = gruvbox[6]
   ),
   widget.TextBox(text = '|'),
+  widget.WindowName(
+    empty_group_string = '',
+    format = '{name} | '
+  ),
   widget.CheckUpdates(
     display_format = '{updates}',
     fmt = 'Updates: {}',
