@@ -117,7 +117,9 @@ widgets = [
     foreground = gruvbox[5]
   ),
   widget.TextBox(text='|'),
-  widget.Battery(),
+  widget.Battery(
+    format = '{percent}'
+  ),
   widget.Sep(
     linewidth = 0,
     padding = 10
