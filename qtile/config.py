@@ -114,8 +114,11 @@ widgets = [
   widget.TextBox(text='|'),
   widget.Clock(
     format = '%b %d %I:%M:%S %p',
-    foreground = gruvbox[5],
-    padding = 20
+    foreground = gruvbox[5]
+  ),
+  widget.Sep(
+    linewidth = 0,
+    padding = 10
   )
 ]
 
