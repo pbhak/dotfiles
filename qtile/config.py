@@ -67,7 +67,7 @@ gruvbox = [
 # layouts
 layout_settings = {
   'border_width': 2,
-  'margin': 3,
+  'margin': 10,
   'border_focus': gruvbox[6]
 }
 
