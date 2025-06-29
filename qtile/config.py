@@ -120,8 +120,8 @@ widgets = [
   widget.Battery(
     format = '{percent:2.0%}',
     full_short_text = '100%',
-    foreground = gruvbox[8],
-    charging_foreground = gruvbox[9]
+    empty_short_text = '0%',
+    foreground = gruvbox[8]
   ),
   widget.Sep(
     linewidth = 0,
