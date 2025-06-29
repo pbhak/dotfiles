@@ -118,7 +118,10 @@ widgets = [
   ),
   widget.TextBox(text='|'),
   widget.Battery(
-    format = '{percent:2.0%}'
+    format = '{percent:2.0%}',
+    full_short_text = '100%',
+    foreground = gruvbox[8],
+    charging_foreground = gruvbox[9]
   ),
   widget.Sep(
     linewidth = 0,
