@@ -27,7 +27,7 @@ keys = [
   # layout, window manipulation and qtile specific commands
   Key([mod], 'Tab', lazy.next_layout(), desc = 'toggle between layouts'),
   Key([mod], 'w', lazy.window.kill(), desc = 'kill focused window'),
-  Key([mod, 'shift'], 'r', lazy.restart(), desc = 'restart qtile'),
+  Key([mod, 'shift'], 'r', lazy.reload_config(), desc = 'reload qtile configuration'),
   Key([mod, 'shift'], 'q', lazy.shutdown(), desc = 'shutdown qtile')
 ]
 
@@ -118,7 +118,7 @@ widgets = [
   ),
   widget.TextBox(text='|'),
   widget.Battery(
-    format = '{percent}'
+    format = '{percent:2.0%}'
   ),
   widget.Sep(
     linewidth = 0,
