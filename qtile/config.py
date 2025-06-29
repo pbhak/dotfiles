@@ -116,6 +116,8 @@ widgets = [
     format = '%b %d %I:%M:%S %p',
     foreground = gruvbox[5]
   ),
+  widget.TextBox(text='|'),
+  widget.Battery(),
   widget.Sep(
     linewidth = 0,
     padding = 10
